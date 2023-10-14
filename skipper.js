@@ -33,6 +33,10 @@
                 const ads = Array.from(document.getElementsByTagName('ytd-ad-slot-renderer'));
                 ads.forEach((e) => {
                     getAdsParent(e)?.remove();
+                    try{
+                        e.remove()
+                    }
+                    catch{}
                 })
 
 
