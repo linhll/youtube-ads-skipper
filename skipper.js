@@ -28,6 +28,10 @@
                 if (html5PlayerNode.classList.contains('ad-showing')) {
                     console.log('ytadskiper', 'skip ads');
                     getPlayer().cancelPlayback();
+
+                    setTimeout(() => {
+                        getPlayer().playVideo();
+                    }, 1000)
                 }
 
                 if (window.yt) {
