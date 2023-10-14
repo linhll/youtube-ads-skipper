@@ -14,6 +14,15 @@
     function getPlayer() {
         return document.getElementById('ytd-player')?.getPlayer();
     }
+    function getAdsParent(el) {
+        if (!el) {
+            return null;
+        }
+        if (el.tagName === 'ytd-rich-item-renderer') {
+            return el;
+        }
+        return getAdsParent(el.parentElement);
+    }
 
     let t_skip = setInterval(() => {
         const html5PlayerNode = document.getElementById('movie_player');
@@ -21,6 +30,12 @@
         if (html5PlayerNode) {
             const config = { attributes: true };
             const callback = () => {
+                const ads = Array.from(document.getElementsByTagName('ytd-ad-slot-renderer'));
+                ads.forEach((e) => {
+                    getAdsParent(e)?.remove();
+                })
+
+
                 const player = getPlayer();
                 if (!player) {
                     return;
