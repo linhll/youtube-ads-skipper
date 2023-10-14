@@ -7,5 +7,6 @@ Auto skip youtube ads
 3. Thêm url này vào ô Import from URL:
    ```https://raw.githubusercontent.com/linhll/youtube-ads-skipper/master/skipper.js```
    rồi bấm Install.
+4. Tắt extension Adblock mà bạn đang dùng trên youtube đi để youtube không hiện popup nữa.
 ## Chú ý:
 - Một số trường hợp sau khi quảng cáo bị skip thì video sẽ không tự động play, cần phải play thủ công. Có thể tôi sẽ cải thiện issuse này sau nếu nó gây khó chịu và nếu có thời gian :D
