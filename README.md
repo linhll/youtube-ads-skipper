@@ -1,18 +1,30 @@
-# youtube-ads-skipper
-Auto skip youtube ads
-=======================================================
+# YouTube Ads Skipper Chrome Extension
 
-![Video](./Video.gif)
+## Overview
+The YouTube Ads Skipper Chrome Extension is a handy tool designed to enhance your YouTube viewing experience by automatically skipping ads. Say goodbye to those annoying interruptions and enjoy uninterrupted content seamlessly.
 
+## Features
+- **Automatic Ad Skipping**: The extension detects and skips YouTube ads automatically, allowing you to focus on your desired content hassle-free.
 
-## Hướng dẫn sử dụng:
-1. Cài extension [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) từ cửa hàng chrome. Extension này giúp chạy các script mỗi khi trang web được load.
-2. Sau khi cài extension Tempermonkey xong thì copy paste url này vào thanh URL của trình duyệt: `extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils` để vào giao diện thêm script của extension.
-3. Thêm url này vào ô Import from URL:
-   ```https://raw.githubusercontent.com/linhll/youtube-ads-skipper/master/skipper.js```
-   rồi bấm Install.
-4. Tắt extension Adblock mà bạn đang dùng trên youtube đi để youtube không hiện popup nữa.
+## Installation
+To install the YouTube Ads Skipper Chrome Extension, follow these steps:
 
+1. Download the extension from [this link](https://gano-space.web.app/yt-ads-skipper/yt-ads-skipper-v1.0.0.zip).
+2. Unzip the downloaded file.
+3. Open Google Chrome and navigate to `chrome://extensions`.
+4. Enable "Developer mode" in the top right corner.
+5. Click on "Load unpacked" and select the unzipped folder containing the extension files.
+6. The extension will now be installed and ready to use.
 
-## Chú ý:
-- Một số trường hợp sau khi quảng cáo bị skip thì video sẽ không tự động play, cần phải play thủ công. Có thể tôi sẽ cải thiện issuse này sau nếu nó gây khó chịu và nếu có thời gian :D
+## Usage
+Using the YouTube Ads Skipper Chrome Extension is simple:
+
+1. Ensure the extension is enabled in your Chrome browser.
+2. Navigate to YouTube and start watching a video.
+3. Sit back and relax as the extension automatically skips ads, allowing you to enjoy uninterrupted content.
+
+## Contributing
+If you encounter any issues or have suggestions for improving the extension, we welcome contributions from the community. Please feel free to submit bug reports or pull requests to help us enhance the YouTube Ads Skipper Chrome Extension for everyone.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
