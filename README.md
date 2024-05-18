@@ -9,7 +9,7 @@ The YouTube Ads Skipper Chrome Extension is a handy tool designed to enhance you
 ## Installation
 To install the YouTube Ads Skipper Chrome Extension, follow these steps:
 
-1. Download the extension from [this link](https://github.com/linhll/youtube-ads-skipper/raw/master/download/yt-ads-skipper.zip).
+1. Download the extension from [this link](https://github.com/linhll/youtube-ads-skipper/releases/download/v1.0.0/youtube-ads-skipper-v1.0.0.zip).
 2. Unzip the downloaded file.
 3. Open Google Chrome and navigate to `chrome://extensions`.
 4. Enable "Developer mode" in the top right corner.
