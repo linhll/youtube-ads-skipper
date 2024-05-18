@@ -1,0 +1,54 @@
+name: Create and Upload ZIP
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger the workflow on version tags
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Specify the Node.js version if needed
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn build
+
+      - name: Create ZIP file
+        run: |
+          mkdir -p output
+          version=${GITHUB_REF/refs\/tags\//}
+          cd dist
+          zip -r ../output/youtube-ads-skipper-$version.zip ./*
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+          body: Release for version ${{ github.ref }}
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: output/youtube-ads-skipper-${{ github.ref_name }}.zip
+          asset_name: youtube-ads-skipper-${{ github.ref_name }}.zip
+          asset_content_type: application/zip
