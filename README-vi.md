@@ -12,7 +12,7 @@ YouTube Ads Skipper là một công cụ hữu ích được thiết kế để 
 
 Để cài đặt YouTube Ads Skipper, làm theo các bước sau:
 
-1. Tải xuống extension từ [liên kết này](https://github.com/linhll/youtube-ads-skipper/releases/download/v1.1.0/youtube-ads-skipper-v1.1.0.zip).
+1. Tải xuống extension từ [liên kết này](https://github.com/linhll/youtube-ads-skipper/releases/download/v1.1.1/youtube-ads-skipper-v1.1.1.zip).
 2. Giải nén tập tin đã tải xuống.
 3. Mở Google Chrome và truy cập vào `chrome://extensions`.
 4. Bật "Chế độ nhà phát triển" ở góc phải trên.

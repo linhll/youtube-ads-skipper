@@ -19,7 +19,7 @@ window.addEventListener('message', (event) => {
   if (event.data.type && event.data.type === 'YT_ADS_SKIPPER_SETTINGS') {
     Object.assign(settings, event.data.settings);
 
-    if (settings.enableSkipAds) {
+    if (isRunning && settings.enableSkipAds) {
       setupPlayer();
     }
 
@@ -69,7 +69,7 @@ const callback = () => {
 
 const observer = new MutationObserver(callback);
 const setupPlayer = () => {
-  if (isRunning || !settings.enableSkipAds) {
+  if (!settings.enableSkipAds) {
     return;
   }
 

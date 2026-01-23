@@ -14,10 +14,12 @@ const store = {
   },
 };
 
-chrome.storage.local.get('settings', (result) => {
-  Object.assign(store.settings, result.settings);
-  logEnabledInput.checked = result.settings.logEnabled ?? false;
-  enableSkipAdsInput.checked = result.settings.enableSkipAds ?? true;
+chrome.storage.local.get(Object.keys(store), (result) => {
+  if (result.settings) {
+    Object.assign(store.settings, result.settings);
+  }
+  logEnabledInput.checked = store.settings.logEnabled ?? false;
+  enableSkipAdsInput.checked = store.settings.enableSkipAds ?? true;
 });
 
 const setSetting = (key: keyof typeof store.settings, value: any) => {
