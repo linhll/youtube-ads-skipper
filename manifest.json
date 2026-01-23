@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Ads Skipper",
+  "description": "Auto skip Youtube ads extension",
+  "version": "1.1.0",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "popup/icon.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "js": ["scripts/main.js"],
+      "matches": ["https://www.youtube.com/*"],
+      "world": "ISOLATED"
+    },
+    {
+      "js": ["scripts/skip-ads.js"],
+      "matches": ["https://www.youtube.com/*"],
+      "world": "MAIN"
+    }
+  ]
+}

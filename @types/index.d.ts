@@ -5,4 +5,5 @@ interface IPlayerHostNode extends Element {
 interface IYoutubePlayer {
   cancelPlayback: () => void;
   playVideo: () => void;
+  getPlayerState: () => EPlayerState;
 }
