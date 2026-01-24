@@ -19,7 +19,7 @@ window.addEventListener('message', (event) => {
   if (event.data.type && event.data.type === 'YT_ADS_SKIPPER_SETTINGS') {
     Object.assign(settings, event.data.settings);
 
-    if (isRunning && settings.enableSkipAds) {
+    if (!isRunning && settings.enableSkipAds) {
       setupPlayer();
     }
 

@@ -1,5 +1,5 @@
 const path = require('path');
-
+const packageJson = require('./package.json');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -68,6 +68,9 @@ module.exports = [
         template: 'popup/index.html',
         filename: 'popup/index.html',
         inject: 'body',
+        templateParameters: {
+          VERSION: packageJson.version,
+        },
       }),
       new CopyPlugin({
         patterns: [
